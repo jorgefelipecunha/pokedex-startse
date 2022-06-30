@@ -1,5 +1,4 @@
 body {
-  /* background: #efefbb; */
   background: linear-gradient(to right, rgb(242, 238, 6), rgb(203, 18, 18));
   color: white;
   margin: 0;
@@ -7,7 +6,7 @@ body {
 }
 
 .container {
-  padding: 40px;
+  padding: 30px;
   margin: 0 auto;
 }
 
