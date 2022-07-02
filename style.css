@@ -56,6 +56,10 @@ h1 {
   background-color: #defde0;
 }
 
+.ghost {
+  background-color: #e1b5ff;
+}
+
 .electric {
   background-color: #fcf7de;
 }
