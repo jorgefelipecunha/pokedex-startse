@@ -5,6 +5,10 @@ body {
   font-family: rubik;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   padding: 30px;
   margin: 0 auto;
