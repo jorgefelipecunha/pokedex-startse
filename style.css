@@ -1,4 +1,5 @@
 body {
+  /* background: #efefbb; */
   background: linear-gradient(to right, rgb(242, 238, 6), rgb(203, 18, 18));
   color: white;
   margin: 0;
@@ -6,7 +7,7 @@ body {
 }
 
 .container {
-  padding: 30px;
+  padding: 40px;
   margin: 0 auto;
 }
 
@@ -130,6 +131,13 @@ h1 {
   height: 180px;
   position: relative;
   z-index: 2;
+}
+/* novo */
+#spinner {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
 @keyframes bounce {
