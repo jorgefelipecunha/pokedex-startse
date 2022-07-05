@@ -34,6 +34,7 @@ h1 {
   text-align: center;
   border-radius: 20px;
   position: relative;
+  cursor: pointer;
 }
 
 .card::after {
@@ -41,11 +42,12 @@ h1 {
   display: block;
   width: 50%;
   height: 45%;
+  max-height: 175px;
   border-radius: 100%;
   background-color: #fff;
   opacity: 0.7;
   position: absolute;
-  top: 15%;
+  top: 58px;
   left: 25%;
 }
 
@@ -127,18 +129,124 @@ h1 {
   z-index: 2;
 }
 
-.card-subtitle {
+.card-stats, .card-subtitle {
   margin-top: 5px;
   color: #666;
   font-weight: lighter;
   position: relative;
   z-index: 2;
+  font-size: 1.1em;
+  text-transform: capitalize;
 }
 
 .card-image {
   height: 180px;
   position: relative;
   z-index: 2;
+}
+
+.info > {
+  margin: 0;
+  padding: 0;
+}
+
+.info .card-stat{
+  display: inline-block;
+  text-align: left;
+  width: 25%;
+  font-size: 1.1em;
+}
+
+.info .number-stat{
+  display: inline-block;
+  text-align: right;
+  width: 10%;
+  border-radius: 50px;
+  font-size: 1.2em;
+}
+
+.info input[type="range"]{
+  all:unset;
+  vertical-align:text-bottom;
+  width: 60%;
+  background-color: #ffffff;
+  border-radius: 50px;
+  margin: 2px 5px;
+}
+
+/*input[type=range]::-webkit-slider-runnable-track {
+  box-shadow: 1px 1px 1px #000000;
+  border-radius: 50px;
+  height: 16px;
+  border: 1px solid #000000;
+  /*background: linear-gradient(to right, red 45%, transparent 45%);/*Fazer isso no js trocando 00% por elstats
+  background-position: left top;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  position: relative;
+  bottom: 3px;
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000;
+  border: 1px solid #000000;
+}*/
+
+input[type=range]::-webkit-slider-runnable-track {
+  box-shadow: 1px 1px 1px #000000;
+  border-radius: 50px;
+  height: 16px;
+  border: 1px solid #000000;
+  background-position: left top;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border-right: 1px solid #000000;
+  height: 14px;
+  width: 14px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.hp::-webkit-slider-thumb{
+  background: #f2ff00;
+}
+.atk::-webkit-slider-thumb{
+  background: #fe4141;
+}
+.def::-webkit-slider-thumb{
+  background: #2373fd;
+}
+.s-atk::-webkit-slider-thumb{
+  background: #ff0000;
+}
+.s-def::-webkit-slider-thumb{
+  background: #160eac;
+}
+.speed::-webkit-slider-thumb{
+  background: #5eff00;
+}
+
+
+.hp::-webkit-slider-runnable-track{
+  background: linear-gradient(to right, #f2ff00 45%, transparent 45%);
+}
+.atk::-webkit-slider-runnable-track{
+  background: linear-gradient(to right, #fe4141 49%, transparent 49%);
+}
+.def::-webkit-slider-runnable-track{
+  background: linear-gradient(to right, #2373fd 49%, transparent 49%);
+}
+.s-atk::-webkit-slider-runnable-track{
+  background: linear-gradient(to right, #ff0000 65%, transparent 65%);
+}
+.s-def::-webkit-slider-runnable-track{
+  background: linear-gradient(to right, #160eac 65%, transparent 65%);
+}
+.speed::-webkit-slider-runnable-track{
+  background: linear-gradient(to right, #5eff00 45%, transparent 45%);
 }
 
 @keyframes bounce {
