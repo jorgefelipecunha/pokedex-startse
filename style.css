@@ -28,6 +28,18 @@ h1 {
   padding-inline-start: 0;
 }
 
+article .info {
+  display: none;
+}
+
+article:hover .info{
+  display: block;
+}
+
+article:hover .card-image{
+  transform: scale(1.1);
+}
+
 .card {
   list-style: none;
   padding: 40px;

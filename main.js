@@ -34,20 +34,6 @@ const listPokemons = pokemons => pokemons.reduce((accumulator, { name, id, types
           </li>
         </article>`;
 
-        setTimeout(() => { //só se aplica ao primeiro card && adicionar o atributo hidden na linha 19 depois que conseguir resolver isso
-          
-            const card = document.querySelector(".article");
-            const info = document.querySelector(".info");
-
-            card.addEventListener('mouseenter', function () {
-                info.hidden = ``;
-            });
-            card.addEventListener('mouseleave', function () {
-                info.hidden = `hidden`;
-            });
-
-        }, 0);
-
     return accumulator;
 },"");
 
