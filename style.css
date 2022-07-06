@@ -1,8 +1,37 @@
-body {
-  background: linear-gradient(to right, rgb(242, 238, 6), rgb(203, 18, 18));
-  color: white;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300&display=swap');
+
+/* Geral */
+* {
+  padding: 0;
   margin: 0;
-  font-family: rubik;
+  box-sizing: border-box;
+  font-family: Open Sans;
+}
+
+.header-pages {
+  background-color: #3560ac;
+  height: 15vh;
+  display: flex;
+  
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.header-pages > img {
+  margin-top: 4%;
+  margin-left: 5%;
+}
+
+.header-pages .logo-img {
+  max-width: 20rem;
+}
+
+body {
+  background: linear-gradient(to right, rgb(250, 248, 139),  hsl(221, 72%, 81%));
+  color: white;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .container {
@@ -10,38 +39,19 @@ body {
   margin: 0 auto;
 }
 
-h1 {
-  text-align: center;
-  font-size: 54px;
-}
-
 .pokedex {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 20px;
   padding-inline-start: 0;
 }
 
 .card {
   list-style: none;
-  padding: 40px;
   color: #222;
   text-align: center;
   border-radius: 20px;
   position: relative;
-}
-
-.card::after {
-  content: "";
-  display: block;
-  width: 50%;
-  height: 45%;
-  border-radius: 100%;
-  background-color: #fff;
-  opacity: 0.7;
-  position: absolute;
-  top: 15%;
-  left: 25%;
 }
 
 .steel {
@@ -81,6 +91,11 @@ h1 {
   background-color: #98d7a5;
 }
 
+.poison,
+.ghost {
+  background-color: #bcecc6;
+}
+
 .bug {
   background-color: #f8d5a3;
 }
@@ -112,7 +127,7 @@ h1 {
 .card-title {
   text-transform: capitalize;
   margin-bottom: 0px;
-  font-size: 32px;
+  font-size: 30px;
   font-weight: normal;
   position: relative;
   z-index: 2;
@@ -120,6 +135,7 @@ h1 {
 
 .card-subtitle {
   margin-top: 5px;
+  margin-bottom: 10px;
   color: #666;
   font-weight: lighter;
   position: relative;
@@ -127,20 +143,20 @@ h1 {
 }
 
 .card-image {
-  height: 180px;
+  height: 150px;
   position: relative;
   z-index: 2;
 }
 
 @keyframes bounce {
   20% {
-    transform: translateY(-6px);
+    transform: translateY(-4px);
   }
   40% {
     transform: translateY(0px);
   }
   80% {
-    transform: translateY(-2px);
+    transform: translateY(-4px);
   }
   100% {
     transform: translateY(0);
