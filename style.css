@@ -129,7 +129,7 @@ h1 {
   z-index: 2;
 }
 
-.card-stats, .card-subtitle {
+.card-subtitle , .stat-name {
   margin-top: 5px;
   color: #666;
   font-weight: lighter;
@@ -150,14 +150,14 @@ h1 {
   padding: 0;
 }
 
-.info .card-stat{
+.info .stat-name{
   display: inline-block;
   text-align: left;
   width: 25%;
   font-size: 1.1em;
 }
 
-.info .number-stat{
+.info .stat-data{
   display: inline-block;
   text-align: right;
   width: 10%;
