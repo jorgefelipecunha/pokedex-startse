@@ -8,11 +8,18 @@
   font-family: Open Sans;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header-pages {
-  background-color: #3560ac;
-  height: 15vh;
+  background: linear-gradient(to right, hsl(218, 66%, 75%), hsl(218, 53%, 44%));
+
+  height: 12vh;
+  width: 100%;
   display: flex;
-  
+  justify-content: space-between;
+
   align-items: center;
   margin-bottom: 25px;
 }
@@ -26,12 +33,33 @@
   max-width: 20rem;
 }
 
-body {
-  background: linear-gradient(to right, rgb(250, 248, 139),  hsl(221, 72%, 81%));
-  color: white;
+.header-pages .header-botoes {
+  display: flex;
+  gap: 50px;
+  margin-right: 15%;
+}
 
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.header-pages .header-botoes > a {
+  display: inline-block;
+  padding: 16px 30px;
+
+  color: hsl(48, 100%, 50%);
+  background-color: transparent;
+
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+
+  transition: 0.5s ease;
+  transition-property: background-color, color;
+
+  cursor: pointer;
+}
+
+.header-pages .header-botoes > a:hover {
+  color: white;
+  font-weight: 500;
+  background-color: hsl(48, 100%, 50%);
 }
 
 .container {
@@ -160,5 +188,26 @@ body {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .header-pages .logo-img {
+    max-width: 10rem;
+  }
+  .header-pages {
+    height: 8vh;
+  }
+  .header-pages .header-botoes > a {
+    padding: 9px 15px;
+
+    font-size: 1.5rem;
+  }
+  .header-pages > img {
+    margin-top: 10%;
+  }
+
+  .header-pages .header-botoes {
+    margin-right: 5%;
   }
 }
