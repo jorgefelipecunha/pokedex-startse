@@ -34,7 +34,7 @@ const listPokemons = pokemons => pokemons.reduce((accumulator, { name, id, types
           </li>
         </article>`;
 
-        setTimeout(() => { //só se aplica ao primeiro card
+        setTimeout(() => { //só se aplica ao primeiro card && adicionar o atributo hidden na linha 19 depois que conseguir resolver isso
           
             const card = document.querySelector(".article");
             const info = document.querySelector(".info");

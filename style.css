@@ -184,29 +184,35 @@ input[type=range]::-webkit-slider-runnable-track {
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border-right: 1px solid #000000;
+  margin-left: 3px;
   height: 14px;
   width: 14px;
   border-radius: 0 50px 50px 0;
-  cursor: pointer;
 }
 
 .hp::-webkit-slider-thumb{
-  background: #f2ff00;
+  background-color: #f2ff00;
+  box-shadow: -3px 0 #f2ff00;
 }
 .atk::-webkit-slider-thumb{
-  background: #ff5555;
+  background-color: #ff5555;
+  box-shadow: -3px #ff5555;
 }
 .def::-webkit-slider-thumb{
-  background: #2373fd;
+  background-color: #2373fd;
+  box-shadow: -3px 0 #2373fd;
 }
 .s-atk::-webkit-slider-thumb{
-  background: #ff0000;
+  background-color: #ff0000;
+  box-shadow: -3px 0 #ff0000;
 }
 .s-def::-webkit-slider-thumb{
-  background: #560eac;
+  background-color: #560eac;
+  box-shadow: -3px 0 #560eac;
 }
 .speed::-webkit-slider-thumb{
-  background: #5eff00;
+  background-color: #5eff00;
+  box-shadow: -3px 0 #5eff00;
 }
 
 @keyframes bounce {
