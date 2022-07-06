@@ -3,6 +3,7 @@ body {
   color: white;
   margin: 0;
   font-family: rubik;
+  text-shadow: 0 0 2px #ffffff;
 }
 
 a {
@@ -129,7 +130,7 @@ h1 {
   z-index: 2;
 }
 
-.card-subtitle , .stat-name {
+.card-subtitle {
   margin-top: 5px;
   color: #666;
   font-weight: lighter;
