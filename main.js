@@ -18,12 +18,18 @@ const listPokemons = pokemons => pokemons.reduce((accumulator, { name, id, types
               <p class="card-subtitle"> ${type.join(" and ")}</p>
               <div class="info">
                   <h3>Statistics</h3>
-                  <p class = "stat-name"> ${statName[0]}:</p><input type="range" class="hp" value="${baseStat[0]}" disabled style="background: linear-gradient(to right, #f2ff00 ${baseStat[0]}%, #ffffff ${baseStat[0]}%)"><p class="stat-data">${baseStat[0]}</p>
-                  <p class = "stat-name"> ${statName[1]}:</p><input type="range" class="atk" value="${baseStat[1]}" disabled style="background: linear-gradient(to right, #fe5555 ${baseStat[1]}%, #ffffff ${baseStat[1]}%)"><p class="stat-data">${baseStat[1]}</p>
-                  <p class = "stat-name"> ${statName[2]}:</p><input type="range" class="def" value="${baseStat[2]}" disabled style="background: linear-gradient(to right, #2373fd ${baseStat[2]}%, #ffffff ${baseStat[2]}%)"><p class="stat-data">${baseStat[2]}</p>
-                  <p class = "stat-name"> ${statName[3]}:</p><input type="range" class="s-atk" value="${baseStat[3]}" disabled style="background: linear-gradient(to right, #ff0000 ${baseStat[3]}%, #ffffff ${baseStat[3]}%)"><p class="stat-data">${baseStat[3]}</p>
-                  <p class = "stat-name"> ${statName[4]}:</p><input type="range" class="s-def" value="${baseStat[4]}" disabled style="background: linear-gradient(to right, #560eac ${baseStat[4]}%, #ffffff ${baseStat[4]}%)"><p class="stat-data">${baseStat[4]}</p>
-                  <p class = "stat-name"> ${statName[5]}:</p><input type="range" class="speed" value="${baseStat[5]}" disabled style="background: linear-gradient(to right, #5eff00 ${baseStat[5]}%, #ffffff ${baseStat[5]}%)"><p class="stat-data">${baseStat[5]}</p>
+                  <p class = "stat-name"> ${statName[0]}:</p><input type="range" class="hp" value="${baseStat[0]}" disabled 
+                  style="background: linear-gradient(to right, #f2ff00 ${baseStat[0]}%, #ffffff ${baseStat[0]}%)"><p class="stat-data">${baseStat[0]}</p>
+                  <p class = "stat-name"> ${statName[1]}:</p><input type="range" class="atk" value="${baseStat[1]}" disabled 
+                  style="background: linear-gradient(to right, #fe5555 ${baseStat[1]}%, #ffffff ${baseStat[1]}%)"><p class="stat-data">${baseStat[1]}</p>
+                  <p class = "stat-name"> ${statName[2]}:</p><input type="range" class="def" value="${baseStat[2]}" disabled 
+                  style="background: linear-gradient(to right, #2373fd ${baseStat[2]}%, #ffffff ${baseStat[2]}%)"><p class="stat-data">${baseStat[2]}</p>
+                  <p class = "stat-name"> ${statName[3]}:</p><input type="range" class="s-atk" value="${baseStat[3]}" disabled 
+                  style="background: linear-gradient(to right, #ff0000 ${baseStat[3]}%, #ffffff ${baseStat[3]}%)"><p class="stat-data">${baseStat[3]}</p>
+                  <p class = "stat-name"> ${statName[4]}:</p><input type="range" class="s-def" value="${baseStat[4]}" disabled 
+                  style="background: linear-gradient(to right, #560eac ${baseStat[4]}%, #ffffff ${baseStat[4]}%)"><p class="stat-data">${baseStat[4]}</p>
+                  <p class = "stat-name"> ${statName[5]}:</p><input type="range" class="speed" value="${baseStat[5]}" disabled 
+                  style="background: linear-gradient(to right, #5eff00 ${baseStat[5]}%, #ffffff ${baseStat[5]}%)"><p class="stat-data">${baseStat[5]}</p>
               </div>
           </li>
         </article>`;
