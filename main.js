@@ -3,7 +3,7 @@
 const getPokemonUrl = (id) => `https://pokeapi.co/api/v2/pokemon/${id}`;
 
 const fetchPokemon = () => {
-    
+
     const pokemonPromises = [];
 
     for (let i = 1; i <= 151; i++) {
@@ -67,7 +67,7 @@ const fetchPokemon = () => {
                     card.addEventListener('mouseleave', function(){
                         info.hidden=`hidden`;
                     });
-                    console.log(hp);
+
                 }, 0);
                 
             return accumulator;
