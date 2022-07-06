@@ -36,15 +36,15 @@ const fetchPokemon = () => {
                                 </li>
                             </article>`;
 
-                            //só se aplica ao primeiro card
-
-                            setTimeout(() => {
+                            setTimeout(() => { //só se aplica ao primeiro card && não recebe ${elBaseStats}
                                 const hp = document.querySelector(".hp");
                                 const atk = document.querySelector(".atk");
                                 const def = document.querySelector(".def");
                                 const sAtk = document.querySelector(".s-atk");
                                 const sDef = document.querySelector(".s-def");
                                 const speed = document.querySelector(".speed");
+                                const card = document.querySelector(".article");
+                                const info = document.querySelector(".info");
                                 
                                 hp.style.setProperty('background', ` linear-gradient(to right, #f2ff00 45%, #ffffff 45%)`);
                                 atk.style.setProperty('background', ` linear-gradient(to right, #fe5555 49%, #ffffff 49%)`);
@@ -53,14 +53,20 @@ const fetchPokemon = () => {
                                 sDef.style.setProperty('background', ` linear-gradient(to right, #560eac 65%, #ffffff 65%)`);
                                 speed.style.setProperty('background', ` linear-gradient(to right, #5eff00 45%, #ffffff 45%)`);
 
-                                //Não lê o ${elBaseStats},
-
                                 /*hp.style.setProperty('background', ` linear-gradient(to right, #f2ff00 ${elBaseStats[0]}%, #ffffff ${elBaseStats[0]}%)`);
                                 atk.style.setProperty('background', ` linear-gradient(to right, #fe5555 ${elBaseStats[1]}%, #ffffff ${elBaseStats[1]}%)`);
                                 def.style.setProperty('background', ` linear-gradient(to right, #2373fd ${elBaseStats[2]}%, #ffffff ${elBaseStats[2]}%)`);
                                 sAtk.style.setProperty('background', ` linear-gradient(to right, #ff0000 ${elBaseStats[3]}%, #ffffff ${elBaseStats[3]}%)`);
                                 sDef.style.setProperty('background', ` linear-gradient(to right, #560eac ${elBaseStats[4]}%, #ffffff ${elBaseStats[4]}%)`);
                                 speed.style.setProperty('background', ` linear-gradient(to right, #5eff00 ${elBaseStats[5]}%, #ffffff ${elBaseStats[5]}%)`);*/
+                                
+                                card.addEventListener('mouseenter', function(){
+                                    info.hidden=``;
+                                });
+                                card.addEventListener('mouseleave', function(){
+                                    info.hidden=`hidden`;
+                                });
+
                             }, 0);
 
             return accumulator;
@@ -69,18 +75,6 @@ const fetchPokemon = () => {
 
         const ul = document.querySelector('[data="pokedex"]');
         ul.innerHTML = listPokemons;
-
-        const card = document.querySelector(".article");
-        const info = document.querySelector(".info");
-
-        //só se aplica ao primeiro card
-        
-        card.addEventListener('mouseenter', function(){
-            info.hidden=``;
-        });
-        card.addEventListener('mouseleave', function(){
-            info.hidden=`hidden`;
-        });
 
     });
 
