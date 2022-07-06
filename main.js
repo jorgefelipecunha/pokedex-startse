@@ -38,6 +38,7 @@ const fetchPokemon = () => {
                 </article>`;
 
                 setTimeout(() => { //só se aplica ao primeiro card && não recebe ${elBaseStats}
+                    
                     const hp = document.querySelector(".hp");
                     const atk = document.querySelector(".atk");
                     const def = document.querySelector(".def");
