@@ -3,6 +3,11 @@ body {
   color: white;
   margin: 0;
   font-family: rubik;
+  text-shadow: 0 0 2px #ffffff;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -13,6 +18,7 @@ body {
 h1 {
   text-align: center;
   font-size: 54px;
+  text-shadow: 0 0 15px #9a40b8;
 }
 
 .pokedex {
@@ -22,6 +28,18 @@ h1 {
   padding-inline-start: 0;
 }
 
+article .info {
+  display: none;
+}
+
+article:hover .info{
+  display: block;
+}
+
+article:hover .card-image{
+  transform: scale(1.1);
+}
+
 .card {
   list-style: none;
   padding: 40px;
@@ -29,6 +47,7 @@ h1 {
   text-align: center;
   border-radius: 20px;
   position: relative;
+  cursor: pointer;
 }
 
 .card::after {
@@ -36,11 +55,12 @@ h1 {
   display: block;
   width: 50%;
   height: 45%;
+  max-height: 175px;
   border-radius: 100%;
   background-color: #fff;
   opacity: 0.7;
   position: absolute;
-  top: 15%;
+  top: 58px;
   left: 25%;
 }
 
@@ -54,6 +74,10 @@ h1 {
 
 .grass {
   background-color: #defde0;
+}
+
+.ghost {
+  background-color: #e1b5ff;
 }
 
 .electric {
@@ -124,12 +148,84 @@ h1 {
   font-weight: lighter;
   position: relative;
   z-index: 2;
+  font-size: 1.1em;
+  text-transform: capitalize;
 }
 
 .card-image {
   height: 180px;
   position: relative;
   z-index: 2;
+}
+
+.info > {
+  margin: 0;
+  padding: 0;
+}
+
+.info .stat-name{
+  display: inline-block;
+  text-align: left;
+  width: 25%;
+  font-size: 1.1em;
+}
+
+.info .stat-data{
+  display: inline-block;
+  text-align: right;
+  width: 10%;
+  border-radius: 50px;
+  font-size: 1.2em;
+}
+
+.info input[type="range"]{
+  all:unset;
+  vertical-align:text-bottom;
+  width: 60%;
+  background-color: #ffffff;
+  border-radius: 50px;
+  margin: 2px 5px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  box-shadow: 1px 1px 1px #000000;
+  border-radius: 50px;
+  height: 16px;
+  border: 1px solid #000000;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border-right: 1px solid #000000;
+  margin-left: 3px;
+  height: 14px;
+  width: 14px;
+  border-radius: 0 50px 50px 0;
+}
+
+.hp::-webkit-slider-thumb{
+  background-color: #f2ff00;
+  box-shadow: -3px 0 #f2ff00;
+}
+.atk::-webkit-slider-thumb{
+  background-color: #ff5555;
+  box-shadow: -3px #ff5555;
+}
+.def::-webkit-slider-thumb{
+  background-color: #2373fd;
+  box-shadow: -3px 0 #2373fd;
+}
+.s-atk::-webkit-slider-thumb{
+  background-color: #ff0000;
+  box-shadow: -3px 0 #ff0000;
+}
+.s-def::-webkit-slider-thumb{
+  background-color: #560eac;
+  box-shadow: -3px 0 #560eac;
+}
+.speed::-webkit-slider-thumb{
+  background-color: #5eff00;
+  box-shadow: -3px 0 #5eff00;
 }
 
 @keyframes bounce {
