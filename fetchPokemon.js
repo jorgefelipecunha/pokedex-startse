@@ -8,13 +8,20 @@ export const fetchPokemon = () => {
 
       accumulator += `
                       <li class="card ${types[0]}">
+                      <h4 class="card-id"><strong>#00${
+                        pokemon.id
+                      }</strong> </h4>
+                      <div class="card-title-image">
+                       <h2 class="card-title">${pokemon.name}</h2>
                       <img class="card-image" alt="${
                         pokemon.name
                       }" src="https://raw.githubusercontent.com/PokeApi/sprites/master/sprites/pokemon/${
         pokemon.id
       }.png">
-                      <h2 class="card-title">${pokemon.id}. ${pokemon.name}</h2>
+                      </div
+                      <div>
                       <p class="card-subtitle">${types.join(' | ')} </p>
+                      </div>
                       </li>`
       return accumulator
     }, '')

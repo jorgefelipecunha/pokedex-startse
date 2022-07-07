@@ -2,6 +2,7 @@ import { pokemonPromises } from './pokemonPromises.js'
 
 export const detailPokemon = () => {
   pokemonPromises
+  
   Promise.all(pokemonPromises).then(pokemons => {
     const detailsPokemons = pokemons.reduce((accumulator, pokemon) => {
       const types = pokemon.types.map(typeInfo => typeInfo.type.name)
