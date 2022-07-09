@@ -41,21 +41,3 @@ const pokemonPromises = generatePokemonPromises();
 Promise.all(pokemonPromises)
     .then(generateHTML)
     .then(insertPokemonsIntoPage);
-   
-
-/*
-<div class="card ${elementTypes[0]}">
-                            <h2 class="card-title">${id}/151 ${name}</h2>   
-                            <img class="card-image" alt="${name}"
-                                    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png">
-                                <p class="card-subtitle"> ${elementTypes.join(" | ").toUpperCase()} </p>
-                            </div>
-                            </div>
-                            <ul>
-                                <li title="${elementStats[0].toUpperCase()}">❤ ${valueStats[0]}</li>
-                                <li title="${elementStats[1][0].toUpperCase() + elementStats[1].substring(1)}">⚔ ${valueStats[1]}</li>
-                                <li title="${elementStats[2][0].toUpperCase() + elementStats[2].substring(1)}">♖ ${valueStats[2]}</li>
-                                <li title="${elementStats[3][0].toUpperCase() + elementStats[3].substring(1)}">☆ ${valueStats[3]}</li>
-                                <li title="${elementStats[4][0].toUpperCase() + elementStats[4].substring(1)}">❖ ${valueStats[4]}</li>
-                                <li title="${elementStats[5][0].toUpperCase() + elementStats[5].substring(1)}">➳ ${valueStats[5]}</li>
-                            </ul>*/
