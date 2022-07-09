@@ -5,6 +5,7 @@ export const detailPokemon = () => {
   
   Promise.all(pokemonPromises).then(pokemons => {
     const detailsPokemons = pokemons.reduce((accumulator, pokemon) => {
+      // const stats = pokemon.stats.map(stateInfo => stateInfo.state.name)
       const types = pokemon.types.map(typeInfo => typeInfo.type.name)
 
       accumulator += `

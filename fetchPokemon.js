@@ -15,9 +15,8 @@ export const fetchPokemon = () => {
                        <h2 class="card-title">${pokemon.name}</h2>
                       <img class="card-image" alt="${
                         pokemon.name
-                      }" src="https://raw.githubusercontent.com/PokeApi/sprites/master/sprites/pokemon/${
-        pokemon.id
-      }.png">
+                      }" src="https://professorlotus.com/Sprites/${pokemon.name}.gif">
+      
                       </div
                       <div>
                       <p class="card-subtitle">${types.join(' | ')} </p>
