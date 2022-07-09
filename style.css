@@ -1,34 +1,56 @@
 body {
-  background: linear-gradient(to right, rgb(242, 238, 6), rgb(203, 18, 18));
+  /* background: #efefbb; */
+  background: linear-gradient(to right, rgb(248, 248, 199), rgb(186, 213, 250));
   color: white;
   margin: 0;
-  font-family: rubik;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .container {
-  padding: 30px;
+  padding: 40px;
   margin: 0 auto;
 }
 
 h1 {
   text-align: center;
   font-size: 54px;
+  color: #222;
+}
+
+h2 {
+  font-size: 32px;
+  text-align: start;
+  margin: 5px 10px;
+}
+
+li {
+  list-style-type: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  padding-left: 4px;
+  
+}
+
+ul {
+  padding: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .pokedex {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
   grid-gap: 20px;
   padding-inline-start: 0;
 }
 
 .card {
   list-style: none;
-  padding: 40px;
+  padding: 16px;
   color: #222;
-  text-align: center;
   border-radius: 20px;
   position: relative;
+  height: 450px;
 }
 
 .card::after {
@@ -40,69 +62,161 @@ h1 {
   background-color: #fff;
   opacity: 0.7;
   position: absolute;
-  top: 15%;
+  top: 22%;
   left: 25%;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 320px;
+}
+
+.pokemon-title {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.id {
+  font-size: 24px;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+}
+
+.pokemon-hp {
+  grid-area: 1 / 2 / 2 / 3;
+  font-size: 32px;
+  text-align: right;
+  padding-right: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+
+.hp {
+  color: rgb(192, 16, 51);
+}
+
+.pokemon-img {
+  grid-area: 2 / 1 / 3 / 3;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pokemon-stats {
+  grid-area: 3 / 1 / 4 / 2;
+  text-align: left;
+  margin: 0;
+  font-size: 16px;
+  border-top:lightgray solid 2px;
+  padding: 0px
+}
+
+.pokemon-stats::after {
+  content: "";
+  display: block;
+  width: 91%;
+  height: 28%;
+  top: 69%;
+  border-radius: 0 0 15px 15px;
+  background-color: #fff;
+  opacity: 0.7;
+  position: absolute;
+  z-index: 1;
+}
+
+.stats {
+  font-size: 16px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.pokemon-logo {
+  grid-area: 3 / 2 / 4 / 3;
+  border-top: lightgray solid 2px;
+  text-align: center;
+  max-height: 133px;
+  padding-top: 8px;
+}
+
+.pokemon-logo img {
+  position: relative;
+  bottom: -24px;
+}
+
+.pokemon-logo img {
+  width: 120px;
+  position: relative;
+  z-index: 2;
+}
+
 .steel {
-  background-color: #f4f4f4;
+  background-color: #B3B2C4;
 }
 
 .fire {
-  background-color: #fddfdf;
+  background-color: #E74940;
 }
 
 .grass {
-  background-color: #defde0;
+  background-color: #7BC45B;
 }
 
 .electric {
-  background-color: #fcf7de;
+  background-color: #FACD56;
 }
 
-.water,
+.water {
+  background-color: #46A0F8;
+}
+
 .ice {
-  background-color: #def3fd;
+  background-color: #80DEFA;
 }
 
 .ground {
-  background-color: #f4e7da;
+  background-color: #DBB85C;
+}
+
+.ghost {
+  background-color: #6E6DB9;
 }
 
 .rock {
-  background-color: #d5d5d4;
+  background-color: #BCAE71;
 }
 
 .fairy {
-  background-color: #fceaff;
+  background-color: #E6A0E6;
 }
 
 .poison {
-  background-color: #98d7a5;
+  background-color: #A35994;
 }
 
 .bug {
-  background-color: #f8d5a3;
+  background-color: #AFBF45;
 }
 
 .dragon {
-  background-color: #97b3e6;
+  background-color: #8370ED;
 }
 
 .psychic {
-  background-color: #eaeda1;
+  background-color: #EB5AA1;
 }
 
 .flying {
-  background-color: #f5f5f5;
+  background-color: #7195F3;
 }
 
 .fighting {
-  background-color: #e6e0d4;
+  background-color: #AF5744;
 }
 
 .normal {
-  background-color: #f5f5f5;
+  background-color: #B0AEA1;
 }
 
 .card:hover {
@@ -120,7 +234,6 @@ h1 {
 
 .card-subtitle {
   margin-top: 5px;
-  color: #666;
   font-weight: lighter;
   position: relative;
   z-index: 2;
@@ -136,12 +249,15 @@ h1 {
   20% {
     transform: translateY(-6px);
   }
+
   40% {
     transform: translateY(0px);
   }
+
   80% {
     transform: translateY(-2px);
   }
+
   100% {
     transform: translateY(0);
   }
