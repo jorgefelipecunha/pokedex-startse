@@ -272,18 +272,18 @@ ul {
 
   .pokemon-logo {
     font-size: 14px;
+    font-weight: bold;
   }
 
   .pokemon-logo img {
     width: 100px;
   }
-}
 
-@media (max-width: 350px){
-  body {
-    background-color: lightgoldenrodyellow;
+  li {
+    font-size: 14px;
   }
 }
+
 
 
 
