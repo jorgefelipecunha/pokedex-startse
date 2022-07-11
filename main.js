@@ -1,16 +1,22 @@
 const getPokemonUrl = (id) => `https://pokeapi.co/api/v2/pokemon/${id}`;
 
+const pokemonPromises = [];
+for (let i=1; i <= 151; i++){
+    pokemonPromises.push(
+        fetch(getPokemonUrl(i)).then((response) => response.json())
+    );
+}
+
+const geraHtmlLi = listPokemons => {
+    const ul = document.querySelector('[data="pokedex"]');
+    ul.innerHTML = listPokemons;
+};
+
 const fetchPokemon = () => {
-    const pokemonPromises = [];
 
-    for (let i=1; i <= 151; i++){
-        pokemonPromises.push(
-            fetch(getPokemonUrl(i)).then((response) => response.json())
-        );
-    }
-
-    Promise.all(pokemonPromises).then((pokemons) => {
-        const listPokemons = pokemons.reduce((accumulator, pokemon) => {
+    Promise.all(pokemonPromises)
+    .then((pokemons) => {
+        return listPokemons = pokemons.reduce((accumulator, pokemon) => {
             const types = pokemon.types.map((typeInfo) => typeInfo.type.name);
 
 
@@ -25,9 +31,8 @@ const fetchPokemon = () => {
         },
         "");
 
-        const ul = document.querySelector('[data="pokedex"]');
-        ul.innerHTML = listPokemons;
-    });
+    })
+    .then(geraHtmlLi)
 };
 
 fetchPokemon();
