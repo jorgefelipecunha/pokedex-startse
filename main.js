@@ -7,12 +7,12 @@ for (let i=1; i <= 151; i++){
     );
 }
 
-const geraHtmlLi = listPokemons => {
+const publicaHtml = listPokemons => {
     const ul = document.querySelector('[data="pokedex"]');
     ul.innerHTML = listPokemons;
 };
 
-const fetchPokemon = () => {
+const geraHtmlLi = () => {
 
     Promise.all(pokemonPromises)
     .then((pokemons) => {
@@ -32,7 +32,7 @@ const fetchPokemon = () => {
         "");
 
     })
-    .then(geraHtmlLi)
+    .then(publicaHtml)
 };
 
-fetchPokemon();
+geraHtmlLi();
