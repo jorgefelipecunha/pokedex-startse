@@ -8,19 +8,23 @@ export const fetchPokemon = () => {
 
       accumulator += `
                       <li class="card ${types[0]}">
-                      <h4 class="card-id"><strong>#00${
+                      <a class="clickDetail" href=detalhes.html?id=${
                         pokemon.id
-                      }</strong> </h4>
+                      }>
+                      <p class="card-id"><strong>#${pokemon.id}</strong> </p>
                       <div class="card-title-image">
                        <h2 class="card-title">${pokemon.name}</h2>
                       <img class="card-image" alt="${
                         pokemon.name
-                      }" src="https://professorlotus.com/Sprites/${pokemon.name}.gif">
+                      }" src="https://professorlotus.com/Sprites/${
+        pokemon.name
+      }.gif">
       
                       </div
                       <div>
                       <p class="card-subtitle">${types.join(' | ')} </p>
                       </div>
+                      </a>
                       </li>`
       return accumulator
     }, '')

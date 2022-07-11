@@ -7,4 +7,3 @@ for (let index = 1; index < 151; index++) {
     fetch(getPokemonUrl(index)).then(response => response.json())
   )
 }
-console.log(pokemonPromises)
