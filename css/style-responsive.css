@@ -1,0 +1,27 @@
+@media screen and (max-width: 570px) {
+  .modal-header {
+    flex-direction: column-reverse;
+  }
+  
+  .modal-image {
+    height: 7rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .pokedex {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+ 
+  .modal-title {
+    font-size: 1.5rem;
+  }
+
+  .modal-subtitle {
+    font-size: 1.1rem;
+  }
+ 
+  .modal-image {
+    height: 5rem;
+  }
+}
